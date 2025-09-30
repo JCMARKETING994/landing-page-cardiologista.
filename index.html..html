@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Júlio César Meneses - Cardiologista</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* GLOBAIS E PALETA DE CORES */
+        :root {
+            --cor-fundo-escuro: #111111;
+            --cor-fundo-claro: #FFFFFF;
+            --cor-dourado: #D4AF37;
+            --cor-texto-claro: #F5F5F5;
+            --cor-texto-escuro: #333333;
+            --cor-texto-secundario: #AAAAAA;
+        }
+        body, h1, h2, h3, p { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--cor-texto-escuro );
+            background-color: var(--cor-fundo-claro);
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* HERO SECTION - TOPO */
+        .hero {
+            /* APENAS O FUNDO PRETO SÓLIDO */
+            background-color: var(--cor-fundo-escuro);
+            color: var(--cor-texto-claro);
+            padding: 120px 0;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; color: var(--cor-fundo-claro); margin-bottom: 15px; }
+        .hero .subtitle { font-size: 1.5rem; font-weight: 300; color: var(--cor-dourado); margin-bottom: 25px; }
+        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto; color: var(--cor-texto-secundario); }
+        .cta-button { display: inline-block; background-color: var(--cor-dourado); color: var(--cor-fundo-escuro); padding: 18px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+        .cta-button:hover { background-color: var(--cor-fundo-claro); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        /* SEÇÕES PADRÃO */
+        .section { padding: 80px 0; text-align: center; }
+        .section h2 { font-size: 2.8rem; font-weight: 600; margin-bottom: 20px; color: var(--cor-texto-escuro); }
+        .section .section-subtitle { font-size: 1.1rem; color: var(--cor-texto-secundario); max-width: 700px; margin: 0 auto 60px auto; }
+        
+        /* SEÇÃO SOBRE COM IMAGEM */
+        .about-content { display: flex; align-items: center; gap: 60px; text-align: left; }
+        .about-text { flex: 1; }
+        .about-image { flex: 1; max-width: 400px; border-radius: 8px; overflow: hidden; }
+        .about-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+        @media (max-width: 768px) {
+            .about-content { flex-direction: column; }
+            .about-text { text-align: center; }
+            #sobre p { text-align: justify; }
+        }
+
+        /* SEÇÃO DE SERVIÇOS (FUNDO ESCURO) */
+        .section-dark { background-color: var(--cor-fundo-escuro); color: var(--cor-texto-claro); }
+        .section-dark h2 { color: var(--cor-fundo-claro); }
+        .section-dark .section-subtitle { color: var(--cor-texto-secundario); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
+        .service-item { background: #1C1C1C; padding: 35px; border-radius: 8px; border: 1px solid #333; transition: transform 0.3s ease, border-color 0.3s ease; }
+        .service-item:hover { transform: translateY(-5px); border-color: var(--cor-dourado); }
+        .service-item .icon { width: 50px; height: 50px; margin: 0 auto 20px auto; filter: invert(80%) sepia(43%) saturate(443%) hue-rotate(359deg) brightness(91%) contrast(88%); }
+        .service-item h3 { color: var(--cor-dourado); margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* SEÇÃO DE LOCALIZAÇÃO */
+        .map-container { border-radius: 8px; overflow: hidden; margin-top: 40px; height: 450px; border: 1px solid #ddd; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        /* RODAPÉ */
+        .footer { background-color: var(--cor-fundo-escuro); color: var(--cor-texto-secundario); text-align: center; padding: 40px 0; }
+        .footer .footer-name { color: var(--cor-fundo-claro); font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
+        .footer p { margin-bottom: 8px; }
+        .footer .copyright { margin-top: 20px; font-size: 0.9rem; border-top: 1px solid #333; padding-top: 20px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Dr. Júlio César Meneses</h1>
+            <p class="subtitle">Cardiologia Avançada e Cuidado Humano</p>
+            <p>Dedicação integral à saúde do seu coração, aliando tecnologia de ponta e um atendimento que valoriza você.</p>
+            <a href="https://wa.me/5511999999999" class="cta-button" target="_blank">Agendar Consulta</a>
+        </div>
+    </header>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Um Compromisso com a Vida</h2>
+            <p class="section-subtitle">Conheça o especialista que irá cuidar de você.</p>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto do Dr. Júlio César Meneses">
+                </div>
+                <div class="about-text">
+                    <p>O Dr. Júlio César Meneses é um cardiologista apaixonado pela profissão, com vasta experiência em diagnóstico e tratamento das mais diversas doenças cardiovasculares. Com uma abordagem focada no paciente, ele acredita que a chave para um tratamento de sucesso é a combinação de conhecimento técnico, equipamentos modernos e, acima de tudo, uma relação de confiança e empatia. Cada paciente é único e merece um plano de cuidado totalmente individualizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="section section-dark">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <p class="section-subtitle">Oferecemos uma estrutura completa para o diagnóstico e acompanhamento da sua saúde cardiovascular.</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="https://www.svgrepo.com/show/489201/heart-rate.svg" alt="Ícone de Avaliação Cardiológica" class="icon">
+                    <h3>Avaliação Completa</h3>
+                    <p>Uma análise detalhada do seu histórico e exames para um diagnóstico preciso e um plano de prevenção eficaz.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://www.svgrepo.com/show/488834/sound-waves.svg" alt="Ícone de Ecocardiograma" class="icon">
+                    <h3>Ecocardiograma com Doppler</h3>
+                    <p>Exame de ultrassom que fornece imagens detalhadas do coração, suas válvulas e o fluxo sanguíneo.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://www.svgrepo.com/show/490103/clipboard-check.svg" alt="Ícone de Risco Cirúrgico" class="icon">
+                    <h3>Risco Cirúrgico</h3>
+                    <p>Avaliação criteriosa para garantir a máxima segurança em procedimentos cirúrgicos de qualquer natureza.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://www.svgrepo.com/show/488076/first-aid-kit.svg" alt="Ícone de Check-up Preventivo" class="icon">
+                    <h3>Check-up Preventivo</h3>
+                    <p>Conjunto de exames e consultas para identificar precocemente fatores de risco e prevenir doenças futuras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="section">
+        <div class="container">
+            <h2>Localização Privilegiada</h2>
+            <p class="section-subtitle">Nossa clínica está localizada em um ponto de fácil acesso, com estacionamento no local, pensada para o seu conforto e conveniência.</p>
+            <p><strong>Endereço:</strong> Rua dos Pinheiros, 500, 10º andar - Pinheiros, São Paulo - SP</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.333333333333!2d-46.696539!3d-23.556735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5791d2c3f7d3%3A0x344d5e8b3e6b8e3e!2sR.%20dos%20Pinheiros%2C%20500%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005422-010!5e0!3m2!1spt-BR!2sbr!4v1664933534549!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">Dr. Júlio César Meneses</p>
+            <p>Cardiologista | CRM/SP 987.654</p>
+            <p>Telefone: (11 ) 5555-1234 | WhatsApp: (11) 98765-4321</p>
+            <p class="copyright">&copy; 2025. Todos os direitos reservados. Desenvolvido por [Seu Nome/Sua Marca aqui]</p>
+        </div>
+    </footer>
+
+</body>
+</html>
